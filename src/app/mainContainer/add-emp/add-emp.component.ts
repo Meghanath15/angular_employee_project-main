@@ -31,8 +31,7 @@ export class AddEmpComponent implements OnInit {
   ngOnInit(): void {}
  
 
-handleSubmit(event: MouseEvent) {
-  event.preventDefault();
+handleSubmit() {
   if(!this.employeeForm.invalid){
    console.log('Invalid name value');
    return;

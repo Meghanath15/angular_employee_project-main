@@ -27,7 +27,7 @@ export class AllEmployeesComponent implements OnInit {
 
    handleDeleteEmp(id: number) {
     this.empService.removeEmployee(id).subscribe((data)=>{
-      this.employees=this.employees.filter(employee=> employee.id !== data.id)
+      this.employees=this.employees.filter(employee=> employee.id !== id)
     })
   }
 

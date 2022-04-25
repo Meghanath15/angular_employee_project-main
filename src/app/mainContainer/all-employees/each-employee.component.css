@@ -1,4 +1,13 @@
-
+hits-button{
+    background-color:rgb(218, 205, 84);
+    color: rgb(7, 12, 58);
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    padding: auto;
+    text-align: center;
+    cursor: pointer;
+}
 .buttons-cont{
     display: flex;
     justify-content: space-around;

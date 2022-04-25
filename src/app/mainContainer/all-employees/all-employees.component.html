@@ -1,20 +1,21 @@
 <div class="employees-container">
   <div>
-    <a class="btn" routerLink="add">Add New</a>
+    <a class="btn" routerLink="add"><button class="add-btn">ADD NEW EMP</button></a>
   </div>
 
-
 <h2 class="title">Employee Details</h2>
+<label for="Filter" class="filter-check"> FILTERS</label>
+<input type="checkbox" name="Filter" id="Filter"/>
 <div class="filter-buttons">
-  <button class="filter-btn" (click)="handleSEO($event)">SEO</button>
-  <button class="filter-btn" (click)="handleMERN($event)">Mean Stack Dev.</button>
-  <button class="filter-btn" (click)="handleFreeLancer($event)">Freelancer</button>
-  <button class="filter-btn" (click)="handleCTO($event)">CTO</button>
-  <button class="filter-btn" (click)="handleFullStack($event)">Full Stack Dev.</button>
-  <button class="filter-btn" (click)="handleNodeJs($event)">Node JS Dev.</button>
-  <button class="filter-btn" (click)="handleDesigner($event)">Designer</button>
-  <button class="filter-btn" (click)="handlePHP($event)">PHP Dev.</button>
-  <button class="filter-btn" (click)="handleCEO($event)">CEO</button>
+  <button class="filter-btn" (click)="handleSEO()">SEO</button>
+  <button class="filter-btn" (click)="handleMERN()">Mean Stack Dev.</button>
+  <button class="filter-btn" (click)="handleFreeLancer()">Freelancer</button>
+  <button class="filter-btn" (click)="handleCTO()">CTO</button>
+  <button class="filter-btn" (click)="handleFullStack()">Full Stack Dev.</button>
+  <button class="filter-btn" (click)="handleNodeJs()">Node JS Dev.</button>
+  <button class="filter-btn" (click)="handleDesigner()">Designer</button>
+  <button class="filter-btn" (click)="handlePHP()">PHP Dev.</button>
+  <button class="filter-btn" (click)="handleCEO()">CEO</button>
 </div>
 <div class="posts-container">
     <p [ngStyle]="notFoundStyle()"
