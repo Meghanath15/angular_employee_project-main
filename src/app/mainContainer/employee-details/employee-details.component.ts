@@ -11,6 +11,7 @@ import { MainEmployeeService } from '../mainEmployee.service';
 
 export class EmployeeDetailsComponent implements OnInit {
   public employee: EmployeeType;
+
   constructor(private route: ActivatedRoute, private empService: MainEmployeeService) { }
 
   ngOnInit(): void {

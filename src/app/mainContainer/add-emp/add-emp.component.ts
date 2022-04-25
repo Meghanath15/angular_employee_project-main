@@ -19,9 +19,10 @@ export class AddEmpComponent implements OnInit {
 
    createEmployeeForm(){
     this.employeeForm=this.formbuilder.group({
-      name:["",Validators.required],
-      phone_number:["", [Validators.required]],
-      designation:["",Validators.required],
+      name:["",Validators.pattern('[a-zA-Z ]*')],
+      phone_number:["",Validators.pattern('[0-9+]*')],
+      email:["",Validators.pattern('[a-zA-Z0-9@.]*')],
+      designation:["",Validators.pattern('[a-zA-Z. ]*')],
       gender: ["",Validators.required],
     });
 
@@ -32,13 +33,15 @@ export class AddEmpComponent implements OnInit {
  
 
 handleSubmit() {
-  if(!this.employeeForm.invalid){
+   if(this.employeeForm.invalid){
    console.log('Invalid name value');
    return;
- }
- this.empService.addEmployees({...this.employeeForm.value}).subscribe((data)=>console.log(data));
+   }
 
- this.employeeForm.reset();
+ this.empService.addEmployees({...this.employeeForm.value}).subscribe((data)=>{
+
+ this.employeeForm.reset()
+});
 
 }
 

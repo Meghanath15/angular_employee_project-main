@@ -107,7 +107,7 @@ export class AllEmployeesComponent implements OnInit {
   
 
   handleAddEmp(emp:EmployeeType){
-    this.bestEmpService.addItem(emp);
+    this.empService.addEmployees(emp);
   }
 
 }
