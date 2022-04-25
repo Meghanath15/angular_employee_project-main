@@ -1,0 +1,64 @@
+.title{
+    text-align: center;
+    font-size: 42px;
+    background-color: #62ca8d;
+    color:aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.employees-container{
+    background-image: url("https://sourceonepartners.com/wp-content/uploads/2014/04/importance_Background_screening_resized.jpg");
+}
+.posts-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.even-cont{
+    background-color: rgb(183, 184, 142);
+    width: 30%;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.odd-cont{
+    background-color: rgb(183, 184, 142);
+    width: 30%;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.not-found-img{
+    width: 20vw;
+    height: 30vh;
+}
+.input-errors {
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+    color: red;
+}
+.btn[disabled] {
+    cursor: not-allowed;
+    background-color: rgb(56, 223, 56);
+    color: rgb(65, 23, 143);
+    user-select: none;
+} 
+.filter-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.filter-btn{
+    background-color: rgba(247, 217, 44, 0.918);
+    height: 6vh;
+    border: 1px solid green;
+    outline-style:groove;
+    border-radius: 10px;
+    width: 8vw;
+    cursor:pointer;
+    
+}
+button:focus{
+    background-color: #62ca8d;
+}

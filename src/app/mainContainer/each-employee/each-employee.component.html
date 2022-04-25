@@ -1,0 +1,16 @@
+<div class="each-post">
+    <div class="name-gender-cont">
+    <h2>Emp Name:{{ emp.name |  uppercase }}</h2>
+    <button class="male">{{emp.gender.slice(0,1)}}</button> 
+    </div>
+        <p>Email: {{ emp.email }}</p>
+            <p class="hits-button">Ph.No: {{ emp.phone_number}}</p>
+            <p class="hits-button">designation: {{ emp.designation }}</p>
+        <div class="all-buttons">
+        <div class="delete-button-container">
+            <button class="promote-button" (click)="handleAdd()">Promote</button>
+            <button class="delete-button" (click)="handleDelete()">Discard Employee</button>
+        </div>
+        <button class="expand-button" (click)="handleExpand()">More Details</button>
+        </div>
+    </div>

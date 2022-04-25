@@ -1,0 +1,34 @@
+<div class="employees-container">
+  <div>
+    <a class="btn" routerLink="add">Add New</a>
+  </div>
+
+
+<h2 class="title">Employee Details</h2>
+<div class="filter-buttons">
+  <button class="filter-btn" (click)="handleSEO($event)">SEO</button>
+  <button class="filter-btn" (click)="handleMERN($event)">Mean Stack Dev.</button>
+  <button class="filter-btn" (click)="handleFreeLancer($event)">Freelancer</button>
+  <button class="filter-btn" (click)="handleCTO($event)">CTO</button>
+  <button class="filter-btn" (click)="handleFullStack($event)">Full Stack Dev.</button>
+  <button class="filter-btn" (click)="handleNodeJs($event)">Node JS Dev.</button>
+  <button class="filter-btn" (click)="handleDesigner($event)">Designer</button>
+  <button class="filter-btn" (click)="handlePHP($event)">PHP Dev.</button>
+  <button class="filter-btn" (click)="handleCEO($event)">CEO</button>
+</div>
+<div class="posts-container">
+    <p [ngStyle]="notFoundStyle()"
+    *ngIf="employees.length === 0; else lessPosts">No record found</p>
+    <ng-template #lessPosts>
+        <app-each-employee
+        *ngFor="let emp of employees;index as i;first as first; last as last; odd as odd; even as even"
+        [ngClass]="even ? 'even-cont': 'odd-cont'"
+        [emp]="emp"
+        (empDelete)="handleDeleteEmp($event)"
+        (empAdd)="handleAddEmp($event)"
+        [first]="first"
+        [last]="last"
+        [index]="i"
+        ></app-each-employee>
+    </ng-template>
+</div> 

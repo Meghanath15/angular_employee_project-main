@@ -1,0 +1,9 @@
+<div class="container">
+    <app-each-employee 
+    *ngIf="employee"
+    class="each-emp"
+    [employee]="employee"
+    [isDetailView]="true"
+    (employeeAdd)="handleEmpAdd($event)"
+    ></app-each-employee>
+</div>

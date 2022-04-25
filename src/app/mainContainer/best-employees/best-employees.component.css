@@ -1,0 +1,21 @@
+.best-employee{
+    background-color: chocolate;
+}
+.btn{
+    margin-left: 20vw;
+    height: 10vh;
+    width: 20vw;
+    background-color: rgb(16, 92, 92);
+    color: rgb(0, 207, 121);
+    font-size: 20px;
+    font-weight: bold;
+}
+.best-emp-items{
+    background-color: rgb(78, 243, 180);
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+}

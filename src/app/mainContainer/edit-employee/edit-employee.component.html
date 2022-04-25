@@ -1,0 +1,74 @@
+<div class="employee-edit">
+    <form
+      class="employee-edit-form"
+      (ngSubmit)="handleSubmit($event)"
+      [formGroup]="employeeForm"
+    >
+      <fieldset class="fieldset">
+        <legend class="legend">Update Employee details</legend>
+        <div class="input-group">
+          <label for="name" class="input-label">Employee Name</label>
+          <input
+            type="text"
+            class="input-control"
+            name="name"
+            placeholder="Employee name here"
+            id="name"
+            formControlName="name"
+          />
+          <small
+            *ngIf="
+              employeeForm.get('name').invalid && employeeForm.get('name').dirty
+            "
+            class="input-error"
+            >*Name is required</small
+          >
+        </div>
+        <div class="input-group">
+          <label for="designation" class="input-label">Employee designation</label>
+          <input
+            type="text"
+            class="input-control"
+            name="designation"
+            placeholder="Employee designation here"
+            id="designation"
+            formControlName="designation"
+          />
+        </div>
+        <div class="input-group">
+          <label for="email" class="input-label">Employee Email</label>
+          <input
+            type="text"
+            class="input-control"
+            name="email"
+            placeholder="Employee email here"
+            id="email"
+            formControlName="email"
+          />
+        </div>
+        <div class="input-group">
+          <label for="gender" class="input-label">Employee gender</label>
+          <select
+            class="input-control"
+            name="gender"
+            id="gender"
+            formControlName="gender"
+          >
+            <option value="" disabled selected>Select a gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="prefernot">Prefer Not to answers</option>
+          </select>
+        </div>
+        <div class="input-group align-center">
+          <button
+            type="submit"
+            class="btn btn-danger"
+            [disabled]="employeeForm.invalid"
+          >
+            Submit
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
