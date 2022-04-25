@@ -33,7 +33,7 @@ export class MainEmployeeService{
     }
 
     public addEmployees(employee: EmployeeType): Observable<EmployeeType>{
-        return this.http.post<EmployeeType>(`${this.baseUrl}/employees`, employee);  
+        return this.http.post<EmployeeType>(`${this.baseUrl}/add`, employee);  
       }
 
     public removeEmployee(id:number): Observable<EmployeeType>{
@@ -46,6 +46,6 @@ export class MainEmployeeService{
       }
 
       public editEmp(id: number, data: EmployeeType): Observable<EmployeeType> {
-        return this.http.put<EmployeeType>(`${this.baseUrl}/employees/${id}`, data);
+        return this.http.put<EmployeeType>(`${this.baseUrl}/edit/${id}`, data);
       }
 }
