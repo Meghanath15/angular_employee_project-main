@@ -18,8 +18,7 @@ import { BestEmployeesComponent } from './mainContainer/best-employees/best-empl
     EachEmployeeComponent,
     AddEmpComponent,
     EmployeeDetailsComponent,
-    BestEmployeesComponent
-    
+    BestEmployeesComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,8 +26,6 @@ import { BestEmployeesComponent } from './mainContainer/best-employees/best-empl
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

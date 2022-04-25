@@ -1,6 +1,7 @@
 import { Component, Input, OnInit,Output, EventEmitter } from '@angular/core';
 import { EmployeeType } from '../type/employee.type';
 import { Router } from '@angular/router';
+import { MainEmployeeService } from '../mainEmployee.service';
 
 @Component({
   selector: 'app-each-employee',
@@ -12,11 +13,12 @@ export class EachEmployeeComponent implements OnInit {
   @Input() public first :boolean;
   @Input() public last: boolean;
   @Input() public index: number;
+
   @Output() public empDelete: EventEmitter<number>=new EventEmitter();
   @Output() public empAdd: EventEmitter<EmployeeType>=new EventEmitter();
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private empService:MainEmployeeService) { }
 
   ngOnInit(): void {
   }
@@ -30,6 +32,10 @@ export class EachEmployeeComponent implements OnInit {
 
   handleExpand(){
     this.router.navigateByUrl(`/employees/${this.emp.id}`,{})
+  }
+
+  handleEdit(){
+    this.router.navigateByUrl(`/edit/${this.emp.id}`,{})
   }
 
 }

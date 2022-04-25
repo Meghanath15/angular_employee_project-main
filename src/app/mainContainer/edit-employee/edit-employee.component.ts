@@ -43,8 +43,7 @@ export class EditEmployeeComponent implements OnInit {
     this.employeeForm.get('name').valueChanges.subscribe((value) => {});
   }
 
-  handleSubmit(event: MouseEvent) {
-    event.preventDefault();
+  handleSubmit() {
     if (this.employeeForm.invalid) {
       console.log('Invalid name value');
       return;
@@ -52,7 +51,7 @@ export class EditEmployeeComponent implements OnInit {
     this.empService.editEmp(this.employeeId, { ...this.employeeForm.value }).subscribe((data) => {
         console.log(data);
         this.employeeForm.reset();
-        this.router.navigateByUrl('/employees');
+        this.router.navigateByUrl('/edit');
       });
   }
 
