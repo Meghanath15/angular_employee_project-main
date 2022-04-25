@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { AllEmployeesComponent } from './mainContainer/all-employees/all-employees.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AllEmployeesComponent
     
   ],
   imports: [
